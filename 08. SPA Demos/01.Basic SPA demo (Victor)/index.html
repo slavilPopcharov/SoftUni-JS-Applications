@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA demo</title>
+  <script src="/Src/app.js" type="module"></script>
+  <style>
+    section{display: none;}
+    label{display: block;}
+    input{border: 1px solid black}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" id="homeBtn">Home</a>
+    <a href="/catalog" id="catalogBtn">Catalog</a>
+    <a href="/about" id="aboutBtn">About</a>
+
+    <div id="guestNav">
+      <a href="/login" id="loginBtn">Login</a>
+      <a href="/register" id="registerBtn">Register</a>
+    </div>
+
+    <div id="userNav">
+      <a href="/create" id="createBtn">Create Movie</a>
+
+      <a href="javascript:void(0)" id="logoutBtn">Logout</a>
+      <span id="greeting"></span>
+    </div>
+    
+  </nav>
+
+  <h1>SPA demo</h1>
+  
+  <main>
+    <section id="homeView">
+      <h2>Home Page</h2>
+  <p>Welcome to our site!</p>
+    </section>
+
+    <section id="catalogView">
+      <h2>Catalog Page</h2>
+      <ul id="movies">
+      </ul>
+    </section>
+
+    <section id="aboutView">
+      <h2>About Page</h2>
+      <p>Phone: +359 82 97 87 72</p>
+    </section>
+
+    <section id="loginView">
+      <h2>Login</h2>
+      <form id="log">
+        <label for=" E-mail">
+        <input type="text" name="email" placeholder="email">
+      </label>
+        <label for="password">
+          <input type="password" name="password" placeholder="password">
+        </label>
+        <input type="submit" value="Sing In">
+        
+      </form>
+    </section>
+
+    <section id="registerView">
+      <h2>Register</h2>
+      <form id="reg">
+        <label for=" E-mail">
+        <input type="text" name="email" placeholder="email">
+      </label>
+        <label for="password">
+          <input type="password" name="password" placeholder="password">
+        </label>
+        <label for="repeat">
+          <input type="password" name="repass" placeholder="repeat password">
+        </label>
+        <input type="submit" value="Register">
+        
+      </form>
+    </section>
+
+    <section id="createView">
+      <h2>Create Movie</h2>
+      <form id="create">
+        <label for="createMovie">
+        <input id="createMovieTitle" type="text" name="title">
+      </label>
+        <input type="submit" value="Create">
+        
+      </form>
+    </section>
+  </main>
+</body>
+</html>
